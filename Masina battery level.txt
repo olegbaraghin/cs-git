@@ -1,0 +1,38 @@
+class Masina {
+    isRunning;
+    culoare;
+    an;
+    model;
+    constructor(culoare, an, model) {
+      this.isRunning = false;
+      this.culoare = culoare;
+      this.an = an;
+      this.model = model;
+    }
+    start() {
+      this.isRunning = true;
+    }
+    stop() {
+      this.isRunning = false;
+    }
+    getCarInfo() {
+      console.log(
+        `Masina ${this.model} de culoare ${this.culoare} fabricata in anul ${this.an}`
+      );
+    }
+  }
+  class VehiculElectric extends Masina {
+    constructor(model, culoare, an) {
+      super(culoare, an, model);
+      this.bateria = 50;
+      this.viteza = 120;
+    }
+    accelereaza() {
+      this.viteza = this.viteza + 10;
+      this.bateria = this.bateria - 5;
+    }
+    incarcare() {
+      this.bateria = this.bateria + 10;
+    }
+  }
+  let tesla = new VehiculElectric("Tesla", "alba", "2018");
