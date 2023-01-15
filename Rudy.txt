@@ -1,0 +1,27 @@
+let aboutRudy = {
+    rasa: 'Husky',
+    culoareaParului: 'alba',
+    anulNasterii: 2019,
+    vaccinuri: ['Rabie', 'Leptospiroză'],
+    pasaport: 'Pasaport Moldovenesc'
+}
+    
+
+
+for(let x of Object.entries(aboutRudy)) {
+    console.log(`${x[0]} - ${x[1]}`)
+}
+
+
+aboutRudy.vaccinuri.push('Hepatita Canina')
+console.log(aboutRudy.vaccinuri)
+
+
+const istoricul= (`ISTORICUL VACCINELOR
+Vaccinele urmatoare: ${aboutRudy.vaccinuri}
+au fost realizate consecutiv pe data de
+03.02.2019
+03.05.2019
+03.02.2022`)
+
+console.log(istoricul)
