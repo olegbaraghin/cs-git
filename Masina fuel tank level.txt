@@ -1,0 +1,40 @@
+class Masina {
+    isRunning;
+    culoare;
+    an;
+    model;
+    constructor(culoare, an, model) {
+      this.isRunning = false;
+      this.culoare = culoare;
+      this.an = an;
+      this.model = model;
+    }
+    start() {
+      this.isRunning = true;
+    }
+    stop() {
+      this.isRunning = false;
+    }
+    getCarInfo() {
+      console.log(
+        `Masina ${this.model} de culoare ${this.culoare} fabricata in anul ${this.an} merge cu viteza de ${this.viteza}`);
+    }
+  }
+  class VehiculCuPetrol extends Masina {
+    constructor(model, culoare, an) {
+      super(culoare, an, model);
+      this.petrol = 20;
+      this.viteza = 120;
+    }
+    accelereaza() {
+      this.viteza = this.viteza + 10;
+      this.petrol = this.petrol - 1;
+      console.log(`Masina ${this.model} de culoare ${this.culoare} fabricata in anul ${this.an} merge cu viteza de ${this.viteza} de km avand in rezervor ${this.petrol} litri de benzina`)
+    }
+    alimenteaza() {
+      this.petrol = this.petrol + 10;
+      console.log(`Masina ${this.model} de culoare ${this.culoare} fabricata in anul ${this.an} fiind alimentata, la momentul de fata rezervorul ei detine ${this.petrol} litri de benzina`)
+    }
+  }
+  let car1 = new VehiculCuPetrol("Lada", "alba", "2000");
+  let car2 = new VehiculCuPetrol("Lada", "rosie", "1999");
