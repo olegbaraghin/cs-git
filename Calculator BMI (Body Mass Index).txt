@@ -1,0 +1,10 @@
+let LuizaWeight = 50
+let LuizaHeight = 1.60
+let DimaWeight = 70
+let DimaHeight = 1.80
+let LuizaBMI = LuizaWeight/ (LuizaHeight**2);
+console.log(LuizaBMI)
+let DimaBMI = DimaWeight/ (DimaHeight**2);
+console.log(DimaBMI)
+let MaiMare = DimaBMI>=LuizaBMI
+console.log(MaiMare)
